@@ -49,9 +49,6 @@ function showMessage(value) {
         messageEl.innerText = expression;
     }
 
-
-    
-
     else if (value === "=") {
         try {
             expression = eval(expression).toString();
