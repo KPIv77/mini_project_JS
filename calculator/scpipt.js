@@ -44,6 +44,12 @@ function showMessage(value) {
         messageEl.innerText = expression;
     }
 
+    else if (value === 'PI') {
+        expression = Math.PI;
+        messageEl.innerText = expression;
+    }
+
+
     
 
     else if (value === "=") {
