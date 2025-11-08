@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../layout_calc/index_stly.css" />
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="head">
+            <h1>Calculator</h1>
+        </div>
+
+        <div class="display" id="display">
+            <p id="message"></p>
+        </div>
+
+    
+        <div class="num">
+            
+            <button onclick="showMessage('AC')">AC</button>
+            <button onclick="showMessage('Del')">Del</button>
+            <button onclick="showMessage('%')">%</button>
+            <button onclick="showMessage('/')">/</button>
+            <button onclick="showMessage(7)">7</button>
+            <button onclick="showMessage(8)">8</button>
+            <button onclick="showMessage(9)">9</button>
+            <button onclick="showMessage('x')">x</button>
+            <button onclick="showMessage(4)">4</button>
+            <button onclick="showMessage(5)">5</button>
+            <button onclick="showMessage(6)">6</button>
+            <button onclick="showMessage('+')">+</button>
+            <button onclick="showMessage(1)">1</button>
+            <button onclick="showMessage(2)">2</button>
+            <button onclick="showMessage(3)">3</button>
+            <button onclick="showMessage('-')">-</button>
+            <button id="advance" onclick="show_advance()">Slide</button>
+            <button onclick="showMessage(0)">0</button>
+            <button onclick="showMessage('.')">.</button>
+            <button onclick="showMessage('=')">=</button>
+            
+        </div>
+
+
+    </div>
+
+    <script src="../main_js/scpipt.js"></script>
+</body>
+</html>
