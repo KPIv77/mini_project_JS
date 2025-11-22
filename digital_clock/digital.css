@@ -36,7 +36,16 @@ body {
 }
 
 .button_layout button {
+    background: rgba(155, 155, 155, 0.3);
+    color: rgb(255, 255, 255); 
+    padding: 3px;
     font-size: 20px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.button_layout button:hover {
+    background: rgba(255, 255, 255, 0.6);
 }
 
 .button_layout {
@@ -44,7 +53,7 @@ body {
     display: flex;
     bottom: 30px;
     left: 50%;
-    gap: 25px;
+    gap: 23px;
     transform: translateX(-50%);
 }
 
