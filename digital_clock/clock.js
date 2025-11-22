@@ -1,27 +1,33 @@
 function time_update() {
+
     const now = new Date();
     const time = now.toLocaleTimeString();
     document.getElementById("showtime").innerText = time;
     console.log(time);
 }
 
-/*
-function pad(n) {
-    return n.toString().padStart(2, '0');
+function buttons () {
+    const mainBtn = document.querySelector(".main-btn");
+    const subBtns = document.querySelectorAll(".sub-btn");
+
+    mainBtn.addEventListener('click', () => {
+        subBtns.forEach(btn => btn.classList.toggle('show'));
+        mainBtn.classList.toggle("hide");   
+    });
+
+    subBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            mainBtn.classList.remove("hide");
+            subBtns.forEach(b => b.classList.remove("show"));
+            console.log(btn.textContent + " clicked");
+        });
+    });
+
 }
 
-function count_time() {
-    let hr = 0;
-    let min = 0;
-    let sec = 0;
-    
-    console.log(`${pad(hr)}:${pad(min)}:${pad(sec)} sec`);
-}
 
-count_time()
-
-*/
-
-
-setInterval(time_update, 1000)
-time_update()
+document.addEventListener("DOMContentLoaded", () => {
+    time_update();
+    setInterval(time_update, 1000);
+    buttons();
+});
