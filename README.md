@@ -11,8 +11,8 @@ mini_project_JS/
     ├──index_style.css
     └──app.js
 </details>
-<details>
 ├──Calculator/
+<details>
     ├──index.html
     ├──index_stly.css
     └──app.js
