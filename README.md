@@ -10,8 +10,8 @@ mini_project_JS/
 │   ├──index.html
 │   ├──index_style.css
 │   └──app.js
+</details>
 ├──Calculator/
-<details>
 │   ├──index.html
 │   ├──index_stly.css
 │   └──app.js
