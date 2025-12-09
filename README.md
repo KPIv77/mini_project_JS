@@ -4,10 +4,13 @@
 mini_project_JS/
 ├──README.md
 ├──index.html
+├──main_style.css
 ├──Quiz/
+<details>
 │   ├──index.html
 │   ├──index_style.css
 │   └──app.js
+<details>
 ├──Calculator/
 │   ├──index.html
 │   ├──index_stly.css
