@@ -7,13 +7,15 @@ mini_project_JS/
 ├──main_style.css
 ├──Quiz/
 <details>
-│   ├──index.html
-│   ├──index_style.css
-│   └──app.js
+    ├──index.html
+    ├──index_style.css
+    └──app.js
 </details>
+<details>
 ├──Calculator/
-│   ├──index.html
-│   ├──index_stly.css
-│   └──app.js
+    ├──index.html
+    ├──index_stly.css
+    └──app.js
+</details>
 ├──digital_clock/
 </pre>
