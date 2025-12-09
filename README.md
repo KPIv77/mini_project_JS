@@ -1,21 +1,16 @@
-# Mini project for learn HTML, CSS and Javascript
+# 🧩 Mini Projects for Learning HTML, CSS, and JavaScript
 
-<pre>
+This repository contains several small projects I created to practice front-end web development.  
+Each mini project focuses on different aspects of HTML, CSS, and JavaScript.
+
+---
+
+## 📁 Project Structure
+```plaintext
 mini_project_JS/
-├──README.md
-├──index.html
-├──main_style.css
-├──Quiz/
-<details>
-    ├──index.html
-    ├──index_style.css
-    └──app.js
-</details>
-├──Calculator/
-<details>
-    ├──index.html
-    ├──index_stly.css
-    └──app.js
-</details>
-├──digital_clock/
-</pre>
+├── README.md
+├── index.html
+├── main_style.css
+├── Quiz/
+├── Calculator/
+└── digital_clock/
