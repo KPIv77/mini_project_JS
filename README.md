@@ -12,5 +12,5 @@ mini_project_JS/
 ├── index.html
 ├── main_style.css
 ├── Quiz/
-├── Calculator/
+├── <details> <summary>📘 Calculator </summary>
 └── digital_clock/
