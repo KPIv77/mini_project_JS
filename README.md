@@ -1,5 +1,6 @@
 # Mini project for learn HTML, CSS and Javascript
-
+Main page for example project 
+https://kpiv77.github.io/mini_project_JS/
 <pre>
 mini_project_JS/
 ├──README.md
@@ -17,5 +18,5 @@ mini_project_JS/
     ├──index_stly.css
     └──app.js
 </details>
-├──digital_clock/
+
 </pre>
