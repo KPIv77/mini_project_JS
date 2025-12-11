@@ -57,6 +57,13 @@ body {
     transition: background 0.2s, transform 0.1s;
 }
 
+.button_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 30px;
+
+}
+
 .button_layout button:hover {
     background: rgba(255, 255, 255, 0.6);
 }
