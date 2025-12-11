@@ -19,42 +19,46 @@ body {
 .container {
     position: relative;
     border: 3px solid white;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(45, 44, 44);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 0px 20px 3px rgb(0, 0, 0);
-    width: auto;
+    width: 400px;
     height: 600px;
     
 }
 
 .showtime {
-    padding-top: 60%;
+    padding-top: 50%;
     font-size: 60px;
     text-shadow: 0 0 10px rgb(143, 142, 142);
+    text-align: center;
     
 }
 
-.button_layout button {
-    background: rgba(155, 155, 155, 0.3);
+.button_layout div {
+    position: absolute;
+    bottom: 0;           /* ชิดขอบล่าง container */
+    left: 0;
+    width: 100%; /* ชดเชยขอบ border ของ container */
+    border: 1px solid #ffffff;
+    padding: 10px;
+    background: rgb(0, 0, 0);
+    border-radius: 0 0 15px 15px; /* โค้งตามขอบล่าง container */
+    text-align: center;
+}
+
+.button_layout span {
+    background: rgba(0, 0, 0, 0.3);
     color: rgb(255, 255, 255); 
     padding: 3px;
-    font-size: 20px;
+    font-size: 35px;
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
 }
 
 .button_layout button:hover {
     background: rgba(255, 255, 255, 0.6);
-}
-
-.button_layout {
-    position: absolute;
-    display: flex;
-    bottom: 30px;
-    left: 50%;
-    gap: 23px;
-    transform: translateX(-50%);
 }
 
 .stopwatch_page {
@@ -64,6 +68,9 @@ body {
 .timers {
     opacity: 0;
 }
+
+
+
 /*
 .btn {
     position: fixed;    
