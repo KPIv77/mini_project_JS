@@ -37,10 +37,10 @@ section {
 
 .showtime {
     position: absolute;
-    padding-top: 40%;
+    top: 30%;
     font-size: 60px;
     text-shadow: 0 0 10px rgb(143, 142, 142);
-    opacity: 1;
+    opacity: 0;
     
 }
 
@@ -75,8 +75,9 @@ section {
 /*section stopwatch page2*/
 .stopwatch_page {
     position: absolute;
+    top: 30%;
     text-align: center;
-    opacity: 0;
+    opacity: 1;
 }
 
 .stopwatch_page h2 {
@@ -88,17 +89,40 @@ section {
 }
 
 .lab_start {
-    padding-top: 60%;
+    position: absolute;
+    top: calc(100% + 135px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
     opacity: 1;
 }
 
+.lab_start span {
+    padding: 8px 30px;
+    border-radius: 10px;
+    background: gray;
+}
 
-.stopwatch_grid {
- 
+.lab_stop_grid {
+    position: absolute;
     display: grid;
     grid-template-columns: repeat(2, 100px);
+    top: calc(100% + 135px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
     gap: 30px;
+    opacity: 0;
 }
+
+.reset_start_grid { 
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    gap: 20px;
+    opacity: 0;
+}
+
+
 
 .timers {
     opacity: 0;
