@@ -94,7 +94,7 @@ section {
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;
-    opacity: 1;
+    opacity: 0;
 }
 
 .lab_start span {
@@ -112,15 +112,32 @@ section {
     transform: translateX(-50%);
     font-size: 30px;
     gap: 30px;
+    opacity: 1;
+}
+
+.lab_stop_grid span {
+    padding: 9px 3px;
+    border-radius: 10px;
+    background: gray;
+}   
+
+.reset_start_grid { 
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    top: calc(100% + 135px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    gap: 30px;
     opacity: 0;
 }
 
-.reset_start_grid { 
-    display: grid;
-    grid-template-columns: repeat(2, 100px);
-    gap: 20px;
-    opacity: 0;
-}
+.reset_start_grid span {
+    padding: 9px 3px;
+    border-radius: 10px;
+    background: gray;
+}   
 
 
 
