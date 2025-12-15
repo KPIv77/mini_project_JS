@@ -33,12 +33,14 @@ section {
     
 }
 
+/*section show time page1*/
+
 .showtime {
     position: absolute;
     padding-top: 40%;
     font-size: 60px;
     text-shadow: 0 0 10px rgb(143, 142, 142);
-    opacity: 0;
+    opacity: 1;
     
 }
 
@@ -70,10 +72,11 @@ section {
 
 }
 
+/*section stopwatch page2*/
 .stopwatch_page {
     position: absolute;
     text-align: center;
-    opacity: 1;
+    opacity: 0;
 }
 
 .stopwatch_page h2 {
