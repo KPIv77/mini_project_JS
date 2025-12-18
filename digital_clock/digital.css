@@ -20,7 +20,6 @@ section {
     justify-content: center;
 }
 
-
 .container {
     position: relative;
     border: 3px solid white;
@@ -30,18 +29,26 @@ section {
     box-shadow: 0px 0px 20px 3px rgb(0, 0, 0);
     width: 400px;
     height: 600px;
-    
 }
 
 /*section show time page1*/
-
 .showtime {
     position: absolute;
     top: 30%;
-    font-size: 60px;
-    text-shadow: 0 0 10px rgb(143, 142, 142);
+    text-align: center;
     opacity: 1;
-    
+    transition: opacity 0.5s ease;
+}
+
+.showtime h3 {
+    position: absolute;
+    font-size: 30px;
+    top: -150%;
+    left: -18%;
+}
+
+.showtime h2 {
+    font-size: 60px;
 }
 
 .button_layout div {
@@ -69,7 +76,11 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     gap: 30px;
+}
 
+.button_grid span.active {
+    border-radius: 10px;
+    background: gray;
 }
 
 /*section stopwatch page2*/
@@ -78,6 +89,14 @@ section {
     top: 30%;
     text-align: center;
     opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.stopwatch_page h3 {
+    position: absolute;
+    font-size: 30px;
+    top: -150%;
+    left: -18%;
 }
 
 .stopwatch_page h2 {
@@ -90,24 +109,29 @@ section {
 
 .lab_start {
     position: absolute;
-    top: calc(100% + 135px);
+    display: grid;
+    grid-template-columns: repeat(1, 100px);
+    top: calc(100% + 163px);
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;
+    gap: 30px;
     opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .lab_start span {
-    padding: 8px 30px;
-    border-radius: 10px;
+    padding: 9px 3px;
+    border-radius: 25px;
     background: gray;
+    cursor: pointer;
 }
 
 .lab_stop_grid {
     position: absolute;
     display: grid;
     grid-template-columns: repeat(2, 100px);
-    top: calc(100% + 135px);
+    top: calc(100% + 163px);
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;
@@ -117,15 +141,16 @@ section {
 
 .lab_stop_grid span {
     padding: 9px 3px;
-    border-radius: 10px;
+    border-radius: 25px;
     background: gray;
+    cursor: pointer;
 }   
 
 .reset_start_grid { 
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(2, 100px);
-    top: calc(100% + 135px);
+    grid-template-columns: repeat(1, 100px);
+    top: calc(100% + 163px);
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;
@@ -135,14 +160,48 @@ section {
 
 .reset_start_grid span {
     padding: 9px 3px;
-    border-radius: 10px;
+    border-radius: 25px;
     background: gray;
+    cursor: pointer;
 }   
 
-
-
+/*section tmimer page3*/
 .timers {
+    position: absolute;
+    top: 30%;
+    text-align: center;
     opacity: 0;
+    transition: opacity 0.5s ease;
 }
+
+.timers h3 {
+    position: absolute;
+    font-size: 30px;
+    top: -150%;
+    left: -18%;
+}
+
+.timers h2 {
+    font-size: 60px;
+}
+
+.timers div {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(1, 100px);
+    top: calc(100% + 163px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    gap: 30px;
+}
+
+.timers div span {
+    padding: 9px 3px;
+    border-radius: 25px;
+    background: gray;
+    cursor: pointer;
+}
+
 
 
