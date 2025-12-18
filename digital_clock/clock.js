@@ -1,33 +1,72 @@
+// Show time present
 function time_update() {
+    const timeEL = document.querySelector(".time_present");
+    const time = new Date();
+    const hours = String(time.getHours()).padStart(2, '0');
+    const minutes = String(time.getMinutes()).padStart(2, '0');
+    const seconde = String(time.getSeconds()).padStart(2, '0');
 
-    const now = new Date();
-    const time = now.toLocaleTimeString();
-    document.getElementById("showtime").innerText = time;
-    console.log(time);
+    timeEL.textContent = `${hours}:${minutes}:${seconde}`;
 }
 
-function buttons () {
-    const mainBtn = document.querySelector(".main-btn");
-    const subBtns = document.querySelectorAll(".sub-btn");
+// Show clock page (page 1)
+function clock_page() {
+    const showtime = document.querySelector('.showtime');
+    const shtime_Btn = document.querySelector('#shtime_Btn'); 
 
-    mainBtn.addEventListener('click', () => {
-        subBtns.forEach(btn => btn.classList.toggle('show'));
-        mainBtn.classList.toggle("hide");   
+    shtime_Btn.addEventListener('click', () => {
+        showtime.style.opacity = 1;
+        document.querySelector(".stopwatch_page").style.opacity = 0;
+        document.querySelector(".timers").style.opacity = 0;
     });
+}
 
-    subBtns.forEach(btn => {
+// Show Stop watch page (page 2)
+function stop_watch () {
+    const stopwatch = document.querySelector('.stopwatch_page');
+    const stop_Btn = document.querySelector('#stop_Btn');
+
+    stop_Btn.addEventListener('click', () => {
+        stopwatch.style.opacity = 1;
+        document.querySelector(".showtime").style.opacity = 0;
+        document.querySelector(".lab_start").style.opacity = 1;
+        document.querySelector(".timers").style.opacity = 0;
+
+    });
+}
+
+// Show timer page (page 3)
+function timer_page () {
+    const timers = document.querySelector('.timers');
+    const timers_Btn = document.querySelector('#timers_Btn');
+
+    timers_Btn.addEventListener('click', () => {
+        timers.style.opacity = 1;
+        document.querySelector(".showtime").style.opacity = 0;
+        document.querySelector(".stopwatch_page").style.opacity = 0;
+    })
+}
+
+// for show color button page current
+function button_color_click () {
+    const buttons_color = document.querySelectorAll('.button_grid span');
+
+    buttons_color.forEach(btn => {
         btn.addEventListener('click', () => {
-            mainBtn.classList.remove("hide");
-            subBtns.forEach(b => b.classList.remove("show"));
-            console.log(btn.textContent + " clicked");
+            buttons_color.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
         });
     });
-
 }
 
-
+// Call function 
 document.addEventListener("DOMContentLoaded", () => {
-    time_update();
-    setInterval(time_update, 1000);
-    buttons();
+    setInterval (() => {
+        time_update();
+    }, 1000);
+    clock_page();
+    stop_watch();
+    timer_page();
+    button_color_click();
+
 });
