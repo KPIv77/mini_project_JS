@@ -10,13 +10,15 @@
     <div class="container">
         <section>
             <div class="showtime">
-                <div id="showtime"></div>
+                <h3>Clock</h3>
+                <h2 class="time_present">00:00:00</h2>
 
             </div>
         </section>
 
         <section>
-            <div class="stopwatch_page">
+            <div class="stopwatch_page" id="stopwatch_page">
+                <h3>Stopwatch</h3>
                 <h2>00:00:00</h2>
 
                 <div class="button_lab">                        
@@ -41,31 +43,27 @@
 
         <section>
             <div class="timers">
-                <h2>00:00:00 min</h2>
+                <h3>Timer</h3>
+                <h2>00:00:00</h2>
 
                 <div>
-                    <button>Cancel</button>
-                    <button>Start</button>
+                    <span>▶</span>
                 </div>
             </div>
         </section>
         
         <section class="button_layout">        
             <div class="button_grid">
-                <span>⏱</span>
-                <span>🛑</span>
-                <span>🕝</span>
+                <span id="shtime_Btn">⏱</span>
+                <span id="stop_Btn">🛑</span>
+                <span id="timers_Btn">🕝</span>
             </div>
         </section>
 
     </div>
-    
-    
 
-    
-    
 
-<script src="../digital_clock/clock.js"></script>
+<script src="./clock.js"></script>
     
 </body>
 </html>
