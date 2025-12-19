@@ -31,7 +31,7 @@ section {
     height: 600px;
 }
 
-/*section show time page1*/
+/*------------------------------------------section show time page1------------------------------------------*/
 .showtime {
     position: absolute;
     top: 30%;
@@ -51,6 +51,67 @@ section {
     font-size: 60px;
 }
 
+/*------------------------------------------section stopwatch page2------------------------------------------*/
+.stopwatch_page {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.stopwatch_page h3 {
+    position: absolute;
+    font-size: 30px;
+    top: -150%;
+    left: -18%;
+}
+
+.stopwatch_page h2 {
+    font-size: 60px;
+}
+
+.lab_stop_grid, .reset_start_grid {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    top: calc(100% + 163px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    gap: 30px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.lab_stop_grid span, .reset_start_grid span {
+    padding: 9px 3px;
+    border-radius: 25px;
+    background: gray;
+    pointer-events: none;
+}   
+
+/*------------------------------------------section tmimer page3------------------------------------------*/
+.timers {
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.timers h3 {
+    position: absolute;
+    font-size: 30px;
+    top: -150%;
+    left: -18%;
+}
+
+.timers h2 {
+    font-size: 60px;
+}
+
+/*------------------------------------------main button for swap page------------------------------------------*/
 .button_layout div {
     position: absolute;
     bottom: 0;           /* ชิดขอบล่าง container */
@@ -83,31 +144,9 @@ section {
     background: gray;
 }
 
-/*section stopwatch page2*/
-.stopwatch_page {
-    position: absolute;
-    top: 30%;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
+/*------------------------------------------button start stop reset------------------------------------------*/
 
-.stopwatch_page h3 {
-    position: absolute;
-    font-size: 30px;
-    top: -150%;
-    left: -18%;
-}
-
-.stopwatch_page h2 {
-    font-size: 60px;
-}
-
-.button_lab {
-    font-size: 30px;
-}
-
-.lab_start {
+.lab_start, .timers div {
     position: absolute;
     display: grid;
     grid-template-columns: repeat(1, 100px);
@@ -115,93 +154,35 @@ section {
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;
-    gap: 30px;
+    gap: 30px;  
+    transition: opacity 0.5s ease;
+}
+
+.lab_start span, .timers div span {
+    padding: 9px 3px;
+    border-radius: 25px;
+    background: gray;
+    pointer-events: none;
+}
+
+/*------------------------------------------for active button------------------------------------------*/
+.page_show {
+    opacity: 1;
+}
+
+.show {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 
-.lab_start span {
-    padding: 9px 3px;
-    border-radius: 25px;
-    background: gray;
+.button_show {
     cursor: pointer;
+    pointer-events: auto;
 }
-
-.lab_stop_grid {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(2, 100px);
-    top: calc(100% + 163px);
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 30px;
-    gap: 30px;
-    opacity: 0;
-}
-
-.lab_stop_grid span {
-    padding: 9px 3px;
-    border-radius: 25px;
-    background: gray;
-    cursor: pointer;
-}   
-
-.reset_start_grid { 
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(1, 100px);
-    top: calc(100% + 163px);
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 30px;
-    gap: 30px;
-    opacity: 0;
-}
-
-.reset_start_grid span {
-    padding: 9px 3px;
-    border-radius: 25px;
-    background: gray;
-    cursor: pointer;
-}   
-
-/*section tmimer page3*/
-.timers {
-    position: absolute;
-    top: 30%;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.timers h3 {
-    position: absolute;
-    font-size: 30px;
-    top: -150%;
-    left: -18%;
-}
-
-.timers h2 {
-    font-size: 60px;
-}
-
-.timers div {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(1, 100px);
-    top: calc(100% + 163px);
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 30px;
-    gap: 30px;
-}
-
-.timers div span {
-    padding: 9px 3px;
-    border-radius: 25px;
-    background: gray;
-    cursor: pointer;
-}
-
 
 
