@@ -11,42 +11,57 @@ function time_update() {
 
 // Show clock page (page 1)
 function clock_page() {
-    const showtime = document.querySelector('.showtime');
     const shtime_Btn = document.querySelector('#shtime_Btn'); 
 
     shtime_Btn.addEventListener('click', () => {
-        showtime.style.opacity = 1;
-        document.querySelector(".stopwatch_page").classList.add("hidden");
-        document.querySelector(".timers").classList.add("hidden");
-        document.querySelector(".lab_start").classList.add("hidden");
-        document.querySelector(".timers div span").classList.add("hidden");
+
+        // remove page stopwatch and timers
+        document.querySelector(".stopwatch_page").classList.remove("show");
+        document.querySelector(".timers").classList.remove("show");
+
+        // show page clock
+        document.querySelector(".showtime").classList.remove("hidden");
     });
 }
 
 // Show Stop watch page (page 2)
 function stop_watch () {
-    const stopwatch = document.querySelector('.stopwatch_page');
+
     const stop_Btn = document.querySelector('#stop_Btn');
 
+
     stop_Btn.addEventListener('click', () => {
-        stopwatch.style.opacity = 1;
-        document.querySelector(".showtime").style.opacity = 0;
-        document.querySelector(".lab_start").style.opacity = 1;
-        document.querySelector(".timers").style.opacity = 0;
+
+        // remove page timers and clock
+        document.querySelector(".showtime").classList.add("hidden");
+        document.querySelector(".timers").classList.remove("show");
+
+        // show page stopwatch page
+        document.querySelector(".stopwatch_page").classList.add("show");
+
+        // add button lab_start
+        document.querySelector(".lab_start span").classList.add("button_show");
 
     });
 }
 
 // Show timer page (page 3)
 function timer_page () {
-    const timers = document.querySelector('.timers');
     const timers_Btn = document.querySelector('#timers_Btn');
 
     timers_Btn.addEventListener('click', () => {
-        timers.style.opacity = 1;
-        document.querySelector(".showtime").style.opacity = 0;
-        document.querySelector(".stopwatch_page").style.opacity = 0;
-    })
+
+        // remove page stopwatch and clock
+        document.querySelector(".showtime").classList.add("hidden");
+        document.querySelector(".stopwatch_page").classList.remove("show");
+
+        // show page timers page
+        document.querySelector(".timers").classList.add("show");
+
+
+        
+
+    });
 }
 
 // for show color button page current
