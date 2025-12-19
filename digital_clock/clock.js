@@ -16,8 +16,10 @@ function clock_page() {
 
     shtime_Btn.addEventListener('click', () => {
         showtime.style.opacity = 1;
-        document.querySelector(".stopwatch_page").style.opacity = 0;
-        document.querySelector(".timers").style.opacity = 0;
+        document.querySelector(".stopwatch_page").classList.add("hidden");
+        document.querySelector(".timers").classList.add("hidden");
+        document.querySelector(".lab_start").classList.add("hidden");
+        document.querySelector(".timers div span").classList.add("hidden");
     });
 }
 
