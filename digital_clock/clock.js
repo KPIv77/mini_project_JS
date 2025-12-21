@@ -78,8 +78,7 @@ function grid_lab_stop () {
 
         document.querySelector(".reset_start_grid").classList.add("hidden");
         document.querySelector(".lab_start").classList.add("hidden");
-        document.querySelector(".lab_stop_grid").classList.add("show");
-        document.querySelector(".lab_stop_grid span").classList.add("button_show");
+        document.querySelector(".lab_stop_grid").classList.add("show", "button_show");
 
         stopwatch_class.style.pointerEvents = 'none';
         stopwatch_class.style.cursor = 'default';
