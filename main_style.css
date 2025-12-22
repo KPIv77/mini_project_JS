@@ -20,6 +20,10 @@ header {
     padding: 1rem 2rem;
 }
 
+section {
+    height: 100vh;
+}
+
 .head {
     display: flex;
     justify-content: space-between;
@@ -102,6 +106,10 @@ header {
     color: inherit;
 }
 
+.about {
+    text-align: center;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
@@ -109,4 +117,13 @@ footer {
     color: white;
 }
 
+.fade-up {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 1s ease;
+}
 
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
