@@ -13,7 +13,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(148, 147, 148);
+    background: rgb(255, 255, 255);
 }
 
 button {
