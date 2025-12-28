@@ -2,7 +2,7 @@
 const elements = document.querySelectorAll('.fade-up');
 
 function handleScroll() {
-    const triggerBottom = window.innerHeight * 0.8;
+    const triggerBottom = window.innerHeight * 0.85;
 
     elements.forEach(el => {
         const rect = el.getBoundingClientRect();
