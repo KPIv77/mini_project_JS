@@ -40,13 +40,55 @@ section {
     list-style: none;
 }
 
-/*Summary short*/
-#summary-slider {
+.hero {
     height: 100vh;
+    background: white;
+    color: black;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #444;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.hero span {
+    color: #00bfff;
+}
+
+.hero p {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    margin-top: 1.5rem;
+    max-width: 900px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1%;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background: #00bfff;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------Summary short--------------------------------------------------------*/
+#summary-slider {
+    height: 50vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
     color: rgb(0, 0, 0);
 }
 
@@ -57,7 +99,8 @@ section {
 
 .summary-slider h2 {
     margin-bottom: 1rem;
-    color: white;
+    text-align: center;
+    color: rgb(0, 0, 0);
 }
 
 .slider-container {
@@ -76,9 +119,9 @@ section {
 .card {
     flex: 0 0 500px;
     height: 300px;
-    background: white;
+    background: #f6f6f6;
     border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 1rem;
     scroll-snap-align: start;
     transition: transform 0.3s ease;
@@ -95,7 +138,7 @@ section {
     transform: translateY(-5px);
 }
 
-/* Sector subject project*/
+/*--------------------------------------------------------Sector subject project--------------------------------------------------------*/
 .subject ul {
     list-style: disc;       
     padding-left: 1.5rem;   
@@ -106,14 +149,55 @@ section {
     color: inherit;
 }
 
+/*--------------------------------------------------------Sector about--------------------------------------------------------*/
 .about {
+    height: 50vh;
     text-align: center;
+}
+
+.skill-tool {
+    margin-top: 20px;
+}
+
+.skills {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.skills li {
+    background: #00bfff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+/*--------------------------------------------------------Sector Contact--------------------------------------------------------*/
+.contact {
+    height: 30vh;
+    padding: 4rem 2rem;
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+}
+
+.contact-row {
+    margin: 1rem 0;
+}
+
+.contact-row a {
+    color:#00bfff;
+    text-decoration: none;
 }
 
 footer {
     text-align: center;
     padding: 1rem;
     background: rgb(30, 30, 30);
+    border-top: 2px solid gray;
     color: white;
 }
 
