@@ -73,19 +73,18 @@ section {
 
 .lab_stop_grid, .reset_start_grid {
     position: absolute;
-    display: grid;
-    grid-template-columns: repeat(2, 100px);
+    display: flex;
     top: calc(100% + 163px);
     left: 50%;
     transform: translateX(-50%);
     font-size: 30px;
-    gap: 30px;
+    gap: 50px;
     opacity: 0;
     pointer-events: none;
 }
 
 .lab_stop_grid span, .reset_start_grid span {
-    padding: 9px 3px;
+    padding: 10px 9px;
     border-radius: 25px;
     background: gray;
     pointer-events: none;
@@ -177,7 +176,7 @@ section {
 }
 
 
-.button_show {
+.button_click {
     cursor: pointer;
 }
 
