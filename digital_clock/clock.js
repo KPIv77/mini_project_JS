@@ -6,6 +6,8 @@ class Actionpage {
 
         this.stopwatch_lab_start = document.querySelector(".lab_start");
         this.stopwatch_lab_stop = document.querySelector(".lab_stop_grid");
+        this.stopwatch_lab_stop_span = document.querySelector(".lab_stop_grid span");
+
 
     }
 
@@ -74,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         swapPage.stopwatch_Btn();
         swapPage.stopwatch_lab_stop.classList.add("show");
-
+        swapPage.stopwatch_lab_stop.classList.add("button_click");
     });
 
     document.querySelector("#timers_Btn").addEventListener("click", () => {
@@ -85,6 +87,20 @@ document.addEventListener("DOMContentLoaded", () => {
         swapPage.timers_page.classList.add("show");
     });
 
+
+
+    document.querySelector("#timers_Btn").addEventListener("click", () => {
+
+        swapPage.clearAll();
+        swapPage.clearClass();
+        swapPage.timers_page.classList.remove("hidden");
+        swapPage.timers_page.classList.add("show");
+    });
+
+
+
+
+    
 
 
 
