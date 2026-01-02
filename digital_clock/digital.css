@@ -36,7 +36,7 @@ section {
     position: absolute;
     top: 30%;
     text-align: center;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.5s ease;
 }
 
@@ -56,7 +56,7 @@ section {
     position: absolute;
     top: 30%;
     text-align: center;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.5s ease;
 }
 
@@ -71,7 +71,27 @@ section {
     font-size: 60px;
 }
 
-.lab_stop_grid, .reset_start_grid {
+.lab_start {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(1, 100px);
+    top: calc(100% + 163px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    gap: 30px;  
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.lab_start span {
+    padding: 9px 3px;
+    border-radius: 25px;
+    background: gray;
+}
+
+.lab_stop_grid {
     position: absolute;
     display: flex;
     top: calc(100% + 163px);
@@ -83,13 +103,31 @@ section {
     pointer-events: none;
 }
 
-.lab_stop_grid span, .reset_start_grid span {
+.lab_stop_grid span {
     padding: 10px 9px;
     border-radius: 25px;
     background: gray;
     pointer-events: none;
 }   
 
+.reset_start_grid {
+    position: absolute;
+    display: flex;
+    top: calc(100% + 163px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    gap: 50px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.reset_start_grid span {
+    padding: 10px 9px;
+    border-radius: 25px;
+    background: gray;
+    pointer-events: none;
+} 
 /*------------------------------------------section tmimer page3------------------------------------------*/
 .timers {
     position: absolute;
@@ -108,6 +146,26 @@ section {
 
 .timers h2 {
     font-size: 60px;
+}
+
+.timers div {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(1, 100px);
+    top: calc(100% + 163px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    gap: 30px;  
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.timers div span {
+    padding: 9px 3px;
+    border-radius: 25px;
+    background: gray;
+    pointer-events: none;
 }
 
 /*------------------------------------------main button for swap page------------------------------------------*/
@@ -143,28 +201,6 @@ section {
     background: gray;
 }
 
-/*------------------------------------------button start stop reset------------------------------------------*/
-
-.lab_start, .timers div {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(1, 100px);
-    top: calc(100% + 163px);
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 30px;
-    gap: 30px;  
-    transition: opacity 0.5s ease;
-}
-
-.lab_start span, .timers div span {
-    padding: 9px 3px;
-    border-radius: 25px;
-    background: gray;
-    pointer-events: none;
-
-}
-
 /*------------------------------------------for active button------------------------------------------*/
 .page_show {
     opacity: 1;
@@ -175,9 +211,9 @@ section {
     transition: opacity 0.5s ease;
 }
 
-
 .button_click {
     cursor: pointer;
+    pointer-events: auto;
 }
 
 .hidden {
