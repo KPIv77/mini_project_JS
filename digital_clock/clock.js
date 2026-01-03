@@ -63,6 +63,12 @@ function stopwatch() {
     stopBtn.id = 'stopBtn';
     stopBtn.textContent = 'Stop';
     buttonsDiv.appendChild(stopBtn);
+
+    stopBtn.addEventListener('click', () => {
+
+        stopBtn.remove();
+        startBtn.style.display = 'inline-block';
+    });
 }
 
 // Call function 
@@ -80,17 +86,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#stop_Btn").addEventListener("click", () => {
 
         swapPage.clearAll();
-        swapPage.clearClass();
         swapPage.stopwatch_page.classList.remove("hidden");
         swapPage.stopwatch_page.classList.add("show");
         swapPage.stopwatch_page.classList.add("button_click");
     });
-   
 
     document.querySelector("#timers_Btn").addEventListener("click", () => {
 
         swapPage.clearAll();
-        swapPage.clearClass();
         swapPage.timers_page.classList.remove("hidden");
         swapPage.timers_page.classList.add("show");
     });
