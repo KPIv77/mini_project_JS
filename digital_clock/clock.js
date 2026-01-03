@@ -1,3 +1,7 @@
+let startBtn = document.getElementById('startBtn');
+let buttonsDiv = document.getElementById('labStart');
+
+
 class Actionpage {
     constructor() {
         this.clock_page = document.querySelector(".showtime");
@@ -6,9 +10,6 @@ class Actionpage {
 
         this.stopwatch_lab_start = document.querySelector(".lab_start");
         this.stopwatch_lab_stop = document.querySelector(".lab_stop_grid");
-        this.stopwatch_lab_stop_span = document.querySelector(".lab_stop_grid span");
-
-
     }
 
     clearAll() {
@@ -38,7 +39,6 @@ function time_update() {
     timeEL.textContent = `${hours}:${minutes}:${seconde}`;
 }
 
-
 // for show color button page current
 function button_color_click () {
     const buttons_color = document.querySelectorAll('.button_grid span');
@@ -49,6 +49,20 @@ function button_color_click () {
             btn.classList.add('active');
         });
     });
+}
+
+function stopwatch() {
+    startBtn.style.display = 'none';
+
+    let resetBtn =document.createElement('button');
+    resetBtn.id = 'resetBtn';
+    resetBtn.textContent = 'Reset';
+    buttonsDiv.appendChild(resetBtn);
+
+    let stopBtn = document.createElement('button');
+    stopBtn.id = 'stopBtn';
+    stopBtn.textContent = 'Stop';
+    buttonsDiv.appendChild(stopBtn);
 }
 
 // Call function 
@@ -69,15 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
         swapPage.clearClass();
         swapPage.stopwatch_page.classList.remove("hidden");
         swapPage.stopwatch_page.classList.add("show");
-        swapPage.stopwatch_lab_start.classList.add("button_click");
+        swapPage.stopwatch_page.classList.add("button_click");
     });
-
-    document.querySelector("#lab_start").addEventListener("click", () => {
-
-        swapPage.stopwatch_Btn();
-        swapPage.stopwatch_lab_stop.classList.add("show");
-        swapPage.stopwatch_lab_stop.classList.add("button_click");
-    });
+   
 
     document.querySelector("#timers_Btn").addEventListener("click", () => {
 
@@ -86,27 +94,11 @@ document.addEventListener("DOMContentLoaded", () => {
         swapPage.timers_page.classList.remove("hidden");
         swapPage.timers_page.classList.add("show");
     });
-
-
-
-    document.querySelector("#timers_Btn").addEventListener("click", () => {
-
-        swapPage.clearAll();
-        swapPage.clearClass();
-        swapPage.timers_page.classList.remove("hidden");
-        swapPage.timers_page.classList.add("show");
-    });
-
-
-
-
-    
-
-
 
     setInterval (() => {
         time_update();
     }, 1000);
     button_color_click();
 
+    startBtn.addEventListener('click', stopwatch);
 });
