@@ -23,7 +23,7 @@ section {
 .container {
     position: relative;
     border: 3px solid white;
-    background-color: rgb(45, 44, 44);
+    background: #1e1e1e;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 0px 20px 3px rgb(0, 0, 0);
@@ -34,7 +34,7 @@ section {
 /*------------------------------------------section show time page1------------------------------------------*/
 .showtime {
     position: absolute;
-    top: 30%;
+    padding-top: 10%;
     text-align: center;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -43,18 +43,18 @@ section {
 .showtime h3 {
     position: absolute;
     font-size: 30px;
-    top: -150%;
-    left: -18%;
+    transform: translateX(-22%);
 }
 
 .showtime h2 {
     font-size: 60px;
+    padding-top: 40%;
 }
 
 /*------------------------------------------section stopwatch page2------------------------------------------*/
 .stopwatch_page {
     position: absolute;
-    top: 30%;
+    padding-top: 10%;
     text-align: center;
     opacity: 1;
     transition: opacity 0.5s ease;
@@ -63,75 +63,51 @@ section {
 .stopwatch_page h3 {
     position: absolute;
     font-size: 30px;
-    top: -150%;
-    left: -18%;
+    transform: translateX(-22%);
 }
 
 .stopwatch_page h2 {
     font-size: 60px;
+    padding-top: 40%;
 }
 
-.lab_start {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(1, 100px);
-    top: calc(100% + 163px);
-    left: 50%;
-    transform: translateX(-50%);
+.lab_start button {
+    padding: 10px 35px;
+    margin-top: 75%;
     font-size: 30px;
-    gap: 30px;  
-    transition: opacity 0.5s ease;
+    border: none;
+    border-radius: 25px;
     cursor: pointer;
-    opacity: 0;
 }
 
-.lab_start span {
-    padding: 9px 3px;
-    border-radius: 25px;
-    background: gray;
-}
-
-.lab_stop_grid {
+#stopBtn, #resetBtn {
     position: absolute;
-    display: flex;
-    top: calc(100% + 163px);
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 30px;
-    gap: 50px;
-    opacity: 0;
-    pointer-events: none;
+    padding: 10px 0px;
+    width: 120px;
+    border-radius: 25px;
 }
 
-.lab_stop_grid span {
-    padding: 10px 9px;
-    border-radius: 25px;
-    background: gray;
-    pointer-events: none;
-}   
-
-.reset_start_grid {
-    position: absolute;
-    display: flex;
-    top: calc(100% + 163px);
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 30px;
-    gap: 50px;
-    opacity: 0;
-    pointer-events: none;
+#startBtn {
+    background-color: #4CAF50;
+    color: white;
 }
 
-.reset_start_grid span {
-    padding: 10px 9px;
-    border-radius: 25px;
-    background: gray;
-    pointer-events: none;
-} 
+#stopBtn {
+    background-color: #f44336;
+    color: white;
+    right: -8%;
+}
+
+#resetBtn {
+    background-color: #2196F3;
+    color: white;
+    left: -8%;
+}
+
 /*------------------------------------------section tmimer page3------------------------------------------*/
 .timers {
     position: absolute;
-    top: 30%;
+    top: 10%;
     text-align: center;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -140,12 +116,12 @@ section {
 .timers h3 {
     position: absolute;
     font-size: 30px;
-    top: -150%;
-    left: -18%;
+    transform: translateX(-22%);
 }
 
 .timers h2 {
     font-size: 60px;
+    padding-top: 40%;
 }
 
 .timers div {
