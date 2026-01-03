@@ -36,7 +36,7 @@ section {
     position: absolute;
     padding-top: 10%;
     text-align: center;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.5s ease;
 }
 
@@ -56,7 +56,7 @@ section {
     position: absolute;
     padding-top: 10%;
     text-align: center;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.5s ease;
 }
 
@@ -80,7 +80,7 @@ section {
     cursor: pointer;
 }
 
-#stopBtn, #resetBtn {
+#stopBtn, #resetBtn, #startBtn{
     position: absolute;
     padding: 10px 0px;
     width: 120px;
@@ -90,6 +90,7 @@ section {
 #startBtn {
     background-color: #4CAF50;
     color: white;
+    right: -8%;
 }
 
 #stopBtn {
@@ -124,24 +125,18 @@ section {
     padding-top: 40%;
 }
 
-.timers div {
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(1, 100px);
-    top: calc(100% + 163px);
-    left: 50%;
-    transform: translateX(-50%);
+.timers div button{
+    padding: 10px 35px;
+    margin-top: 75%;
     font-size: 30px;
-    gap: 30px;  
-    transition: opacity 0.5s ease;
-    pointer-events: none;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
 }
 
-.timers div span {
-    padding: 9px 3px;
-    border-radius: 25px;
-    background: gray;
-    pointer-events: none;
+#start_timers {
+    background-color: #4CAF50;
+    color: white;
 }
 
 /*------------------------------------------main button for swap page------------------------------------------*/
@@ -197,4 +192,3 @@ section {
   pointer-events: none;
   transition: opacity 0.5s ease;
 }
-
