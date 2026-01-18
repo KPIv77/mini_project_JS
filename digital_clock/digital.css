@@ -132,6 +132,7 @@ section {
     border: none;
     border-radius: 25px;
     cursor: pointer;
+    pointer-events: none;
 }
 
 #start_timers {

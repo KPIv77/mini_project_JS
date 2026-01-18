@@ -1,12 +1,17 @@
 let startBtn = document.getElementById('startBtn');
 let buttonsDiv = document.getElementById('labStart');
 
+let start_timers = document.getElementById('start_timers');
+let buttonDiv_timers = document.getElementById('')
+
 
 class Actionpage {
     constructor() {
         this.clock_page = document.querySelector(".showtime");
         this.stopwatch_page = document.querySelector(".stopwatch_page");
         this.timers_page = document.querySelector(".timers");
+
+        this.starttime = document.querySelector(".btn button");
 
         this.stopwatch_lab_start = document.querySelector(".lab_start");
         this.stopwatch_lab_stop = document.querySelector(".lab_stop_grid");
@@ -16,6 +21,7 @@ class Actionpage {
         this.clock_page.classList.add("hidden");
         this.stopwatch_page.classList.add("hidden");
         this.timers_page.classList.add("hidden");
+        this.starttime.classList.remove("button_click");
     }
 
     stopwatch_Btn() {
@@ -71,6 +77,10 @@ function stopwatch() {
     });
 }
 
+function timersPage() {
+
+}
+
 // Call function 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -88,7 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
         swapPage.clearAll();
         swapPage.stopwatch_page.classList.remove("hidden");
         swapPage.stopwatch_page.classList.add("show");
-        swapPage.stopwatch_page.classList.add("button_click");
     });
 
     document.querySelector("#timers_Btn").addEventListener("click", () => {
@@ -96,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
         swapPage.clearAll();
         swapPage.timers_page.classList.remove("hidden");
         swapPage.timers_page.classList.add("show");
+        swapPage.starttime.classList.add('button_click');
     });
 
     setInterval (() => {
